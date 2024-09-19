@@ -16,6 +16,8 @@ const openSecondModal = document.querySelector(".ajoutPicture")
 const secondModal = document.querySelector("#secondModal")
 const fileInput = document.querySelector("#file-upload")
 const imgPreview = document.querySelector(".imgPreview")
+let formModal = document.querySelector("#formModal")
+const categorieSelected = document.querySelector("#categorie")
 
 /* méthodes pour afficher tout le work dans la gallerie */ 
 
@@ -219,7 +221,9 @@ galleryClose.addEventListener("click" , () => {
 })
 
 openSecondModal.addEventListener("click" , () => {
-    secondModal.style.display = "flex"
+     secondModal.style.display = "flex"
+     mainModal.style.display = "none"
+    selectCategories()
 } )
 
 fileInput.addEventListener("change" , (event) => {
@@ -240,3 +244,29 @@ fileInput.addEventListener("change" , (event) => {
     }
 })
 
+const selectCategories = () => {
+    categorieSelected.innerHTML = ""
+    let option = document.createElement("option")
+    categorieSelected.appendChild(option)
+    console.log(allCategories)
+    const allCategoriesWithoutTous = allCategories.filter((categorie) => categorie.id !== 0)
+    console.log("texte" , allCategoriesWithoutTous)
+    allCategoriesWithoutTous.forEach((categorie) => {
+        let option = document.createElement("option")
+        option.value = categorie.name
+        option.innerText = categorie.name
+        option.id = categorie.id
+        categorieSelected.appendChild(option)
+
+    })
+}
+
+formModal.addEventListener("submit" , async (e) => {
+    e.preventDefault()
+    await upLoadFile()
+
+}) 
+
+const upLoadFile = async () => {
+    const token = localStorage.getItem("token")
+}
