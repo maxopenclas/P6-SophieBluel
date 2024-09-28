@@ -22,7 +22,7 @@ header {
 }
 
 .rightHeader p {
-    font-family: work sans;
+    font-family: work sans, serif;
     font-size: 16px;
 }
 
@@ -42,7 +42,7 @@ main {
 
 h1 {
     margin-top: 80px;
-    font-family: syne;
+    font-family: syne, serif;
     font-weight: bold;
     color: #1D6154;
 }
@@ -53,7 +53,7 @@ h1 {
 }
 
 .inputLog label {
-    font-family: work sans;
+    font-family: work sans, serif;
     font-size: 14px;
     margin-bottom: 3px;
     color: #3D3D3D;
@@ -65,6 +65,7 @@ h1 {
     border: none;
     box-shadow: 1px 1px 14px -4px rgba(0, 0, 0, 0.5);
     margin-bottom: 15px;
+    cursor:pointer;
 }
 
 .buttonLog {
@@ -73,15 +74,14 @@ h1 {
 	border-radius: 16px;
 	border: solid 1px #1D6154;
     padding: 5px 15px 5px 15px;
-	border-color: #1D6154;
-	font-family: syne;
+    font-family: syne, serif;
     color: white;
     padding-left: 30px;
     padding-right: 30px;
 }
 
 .mdpForget {
-    font-family: work sans;
+    font-family: work sans, serif;
     text-decoration: underline;
     font-size: 14px;
 }
@@ -90,7 +90,7 @@ footer {
     display: flex;
     flex-direction: row-reverse;
     margin-top: 100px;
-    font-family: work sans;
+    font-family: work sans, serif;
     font-size: 14px;
     color: #3D3D3D;
     margin-right: 30px;

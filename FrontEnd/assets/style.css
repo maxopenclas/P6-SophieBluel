@@ -162,14 +162,14 @@ h1 {
 }
 
 h1>span {
-	font-family: 'Work Sans';
+	font-family: 'Work Sans', serif;
 	font-size: 10px;
 	letter-spacing: 0.1em;
 	;
 }
 
 h2 {
-	font-family: 'Syne';
+	font-family: 'Syne', serif;
 	font-weight: 700;
 	font-size: 30px;
 	color: #1D6154
@@ -261,7 +261,7 @@ li:hover {
 	height: 50px;
 	font-size: 1.2em;
 	border: none;
-	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.09);
 }
 
 #contact label {
@@ -270,11 +270,11 @@ li:hover {
 
 #contact textarea {
 	border: none;
-	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.09);
 }
 
 input[type="submit"] {
-	font-family: 'Syne';
+	font-family: 'Syne', serif;
 	font-weight: 700;
 	color: white;
 	background-color: #1D6154;
@@ -304,8 +304,7 @@ footer nav ul {
 	border-radius: 16px;
 	border: solid 1px #1D6154;
 	padding: 5px 15px 5px 15px;
-	border-color: #1D6154;
-	font-family: syne;
+	font-family: syne, serif;
 	color: #1D6154;
 }
 
@@ -326,6 +325,7 @@ footer nav ul {
 	position: absolute;
 	right: 350px;
 	top: 10px;
+	cursor: pointer;
 }
 
 .fa-regular {
@@ -350,7 +350,7 @@ footer nav ul {
 
 #modalPrincipal {}
 
-.modalPrincipal {
+.modal {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -363,24 +363,24 @@ footer nav ul {
 	z-index: 1000;
 }
 
-.modalPrincipal div {
+.modal div {
 	position: relative;
 }
 
-.modalPrincipal .content {
-	width: 630px;
+.modal .content {
+	gap: 30px;
+	width: 45%;
 	background-color: white;
-	
+	display: flex;
 	align-items: center;
 	flex-direction: column;
 	border-radius: 10px;
-	height: 688px;
-	gap: 30px;
+	height: 65%;
 
 }
 
 h3 {
-	font-family: Work Sans;
+	font-family: Work Sans, serif;
 	font-size: 26px;
 	font-weight: 400;
 	line-height: 30.5px;
@@ -452,7 +452,6 @@ h3 {
 	top: 5%;
 	font-size: 2vw;
 	cursor: pointer;
-
 }
 
 hr {
@@ -462,6 +461,17 @@ hr {
 
 .titleGallery {
 	padding-top: 50px;
+}
+/*Seconde Modale */
+
+form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+#secondModal{
+
 }
 
 .secondModal {
@@ -477,6 +487,12 @@ hr {
 	z-index: 1000;
 }
 
+
+
+#secondModalContent {
+	gap:0;
+}
+
 .secondGallery {
 	width: 630px;
 	background-color: white;
@@ -487,6 +503,118 @@ hr {
 	gap: 30px;
 	display: flex;
 	position: relative;
+}
+
+.return {
+	position: absolute;
+	left: 5%;
+	top: 5%;
+	font-size: 2vw;
+}
+
+.labelSecondModal {
+	padding-top: 14%;
+	margin-bottom: 8%;
+	color: #000;
+	font-family: "Work Sans", serif;
+	font-size: 26px;
+	font-weight: 400;
+}
+
+.uploadSection {
+	text-align: center;
+	width: 41vh;
+	height: 169px;
+	flex-shrink: 0;
+	border-radius: 3px;
+	background: #E8F1F6;
+	margin: 0 auto 20px;
+	padding-bottom: 20px;
+}
+
+.custom-file-upload {
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.fa-regular,
+.far {
+	margin-right: 10px;
+}
+
+.addPhoto {
+	width: 40%;
+	height: 30px;
+	border-radius: 50px;
+	background: #CBD6DC;
+	color: #306685;
+	display: inline-block;
+	padding: 12px 10px 0 10px;
+
+	margin: 20px auto;
+}
+
+.extensions {
+	color: #444;
+	font-weight: 400;
+}
+
+.imagePreviewContainer {
+	text-align: center;
+}
+
+.imagePreview {
+	width: 25%;
+	max-height: 168px;
+	display: none;
+	margin: -188px auto 0;
+	object-fit: cover;
+}
+
+.uploadSection i {
+	font-size: 58px;
+	color: #B9C5CC;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.labelColorFont {
+	color: black;
+	font-family: "Work Sans", serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	margin-left: 125px;
+
+}
+
+.marginHeightBorder {
+	margin: 8px 125px;
+	min-height: 48px;
+	border: none;
+	box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.09);
+}
+
+.line {
+	margin-top: 60px;
+}
+
+.valider {
+	border-radius: 60px;
+	background-color: #1D6154;
+	color: white;
+	font-size: 14px;
+	margin-top: 30px;
+	margin-left: 220px;
+	width: 41%;
+	height: 52px;
+	cursor: pointer;
+}
+
+.valider:disabled {
+	background-color: #B9C5CC;
+	cursor: not-allowed;
 }
 
 .form-group {
@@ -534,4 +662,3 @@ hr {
 	max-width: 100%;
 	max-height: 168px;
 }
-
