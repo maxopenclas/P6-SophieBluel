@@ -16,7 +16,7 @@
 
 <!--modale principale-->
 
-<div id="modalPrincipal" class="modalPrincipal">
+<div id="modalPrincipal" class="modal">
 	<div class="galleryInterface content">
 		<h3 class="titleGallery">Galerie photo</h3>
 		<div class="worksIcon"></div>
@@ -28,40 +28,32 @@
 
 <!-- seconde modale-->
 
-<div id="secondModal" class="secondModal">
-	<div class="secondGallery content">
-		<i class="fa-solid fa-arrow-left return"></i>
-		<h3>Ajouter photo</h3>
-		<form id="formModal" class="formModal">
-		<div class="image-upload">
-			<label for="file-upload" class="upload-label">
-				<i id= "photo-add-icon" class="fa-regular fa-image"></i>
-				<p>+ Ajouter photo</p>
-				<span>jpg, png - 4mo max</span>
-			</label>
-			<input id="file-upload" type="file" class="fileUpload" style="display: none;">
-		</div>
-			<div class="previewContainer">
-				<img class="imgPreview" src="" alt="prévisualisation">
+<div id="secondModal" class="modal">
+	<div class="content" id="secondModalContent">
+		<i class="fa-solid fa-xmark galleryClose"></i>
+		<a id="arrow-return" href="#"><i class="fa-solid fa-arrow-left return"></i></a>
+		<h2 class="labelSecondModal">Ajout photo</h2>
+		<form action="#" method="post" enctype="multipart/form-data" id="formModal">
+			<div class="uploadSection">
+				<label for="fileUpload" class="custom-file-upload">
+					<input id="fileUpload" type="file" accept=".jpg,.png" style="display: none" />
+					<i id= "iconPreview" class="fa-regular fa-image"></i>
+					<span class="addPhoto"> + Ajouter photo</span>
+				</label>
+				<p class="extensions">jpg, png : 4mo max</p>
 			</div>
-			<div class="form-group">
-				<label for="titre">Titre</label>
-				<input type="text" id="titre" class="secondGalleryTitle">
+			<div class="imagePreviewContainer">
+				<img id="imagePreview" src="" alt="Prévisualisation" class="imagePreview">
 			</div>
-			<div class="form-group">
-				<label for="categorie" class="categorieStyle">Catégorie</label>
-				<select id="categorie" class="categorieStyle secondGalleryTitle">
-					<!-- Categories viennent de l'api API -->
-				</select>
-			</div>
-			
-			<hr>
-			<button type="submit" class="button-submit">Valider</button>
-			<i class="fa-solid fa-xmark galleryClose"></i>
-		
+
+			<label for="title" class="labelColorFont">Titre</label>
+			<input type="text" id="title" name="title" class="marginHeightBorder">
+			<label for="category" class="labelColorFont">Catégorie</label>
+			<select id="category" name="category" class="marginHeightBorder"></select>
+			<hr class="line">
+			<button type="submit" class="valider">Valider</button>
 		</form>
 	</div>
-	
 </div>
 
 <body>
