@@ -465,3 +465,12 @@ const resetForm = () => {
     elements.submitButton.disabled = true;
 };
 
+// ajouter un écouteurd'évènements pour fermer les modales lorqu'on clique à l'exterieur
+
+window.addEventListener("click", (event) => {
+    if (event.target === elements.formModal) {
+        elements.formModal.style.display = "none";
+    } if (event.target === elements.secondModal) {
+        elements.secondModal.style.display = "none"
+    }
+})
