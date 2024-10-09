@@ -375,7 +375,6 @@ footer nav ul {
 	align-items: center;
 	flex-direction: column;
 	border-radius: 10px;
-	height: 65%;
 
 }
 
@@ -470,9 +469,6 @@ form {
 	width: 100%;
 }
 
-#secondModal{
-
-}
 
 .secondModal {
 	position: fixed;
@@ -605,11 +601,11 @@ form {
 	background-color: #1D6154;
 	color: white;
 	font-size: 14px;
-	margin-top: 30px;
-	margin-left: 220px;
+	margin: 20px auto 30px auto;
 	width: 41%;
 	height: 52px;
 	cursor: pointer;
+	
 }
 
 .valider:disabled {
