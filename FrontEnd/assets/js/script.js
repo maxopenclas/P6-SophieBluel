@@ -409,7 +409,6 @@ const upLoadFile = async () => {
         if (!response.ok) {
             return Promise.reject(new Error(`Error uploading file: ${response.status}`));
         }
-        alert(`${elements.formModal.title.value} a été ajouté avec succès`)
         console.log("File uploaded successfully");
         //Vider et raffraichir la galerie
         elements.galleryContainer.innerHTML = "";
